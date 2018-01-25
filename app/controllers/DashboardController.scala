@@ -5,7 +5,7 @@ import play.api.mvc.{Action, Controller}
 class DashboardController extends Controller {
 
   def dashboard = Action {
-    Ok
+    Ok(views.html.main())
   }
 
 }
