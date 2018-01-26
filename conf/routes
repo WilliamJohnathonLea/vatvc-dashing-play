@@ -1,2 +1,4 @@
 
-GET     /dashboard      controllers.DashboardController.dashboard
+GET     /vatvc/dashboard      controllers.DashboardController.dashboard
+
+GET     /assets/*file         controllers.Assets.at(path="/public", file)
