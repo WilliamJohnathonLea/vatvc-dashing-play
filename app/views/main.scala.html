@@ -13,7 +13,8 @@
     <script type="text/javascript" src='@routes.Assets.at("lib/gridster.js/dist/jquery.gridster.min.js")'></script>
     <!--<script type="text/javascript" src="/assets/application.js"></script>-->
     <link rel="stylesheet" href='@routes.Assets.at("lib/gridster.js/dist/jquery.gridster.min.css")'>
-    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/application.css")'>
+    <!--<link rel="stylesheet" href='@routes.Assets.at("stylesheets/application.css")'>-->
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/widgets/sprint_goal.css")'>
 
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="icon" href="/assets/favicon.ico">
@@ -23,7 +24,7 @@
 
 <div class="gridster">
     <ul>
-        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+        <li class="widget-sprint-goal" data-row="1" data-col="1" data-sizex="2" data-sizey="1">
             @views.html.widgets.sprintGoal()
         </li>
 
@@ -40,9 +41,9 @@
             <div data-view="Image" data-image="/incredibles_logo.png"></div>
         </li>
 
-        <li data-row="3" data-col="1" data-sizex="3" data-sizey="3">
-            <div data-id="master_manage_vat_subscription_update" data-view="ManageVatPrs"></div>
-        </li>
+        <!--<li data-row="3" data-col="1" data-sizex="3" data-sizey="3">-->
+            <!--<div data-id="master_manage_vat_subscription_update" data-view="ManageVatPrs"></div>-->
+        <!--</li>-->
     </ul>
 </div>
 <script type="text/javascript">
@@ -50,9 +51,9 @@
 
     $(function() {
         gridster = $(".gridster > ul").gridster({
-            widget_margins: [10, 10],
+            widget_margins: [5, 5],
             widget_base_dimensions: [140, 140],
-            min_cols: 6
+            min_cols: 4
         }).data('gridster');
     });
 </script>

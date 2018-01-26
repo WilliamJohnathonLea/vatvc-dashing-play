@@ -10,11 +10,9 @@ $moreinfo-color:    rgba(255, 255, 255, 0.8);
 // Widget-quote styles
 // ----------------------------------------------------------------------------
 .widget-sprint-goal {
-  // background: $background-color url('/assets/quote.png') no-repeat 50% 50%;
-  //background: $background-color url('/assets/goal.png') no-repeat 2% 2%;
   background-color: $background-color;
   background-position: center;
-  background-image: url('/assets/goal1600.png');
+  background-image: url('/assets/images/goal1600.png');
   background-size: 50%;
   background-repeat: no-repeat;
 
