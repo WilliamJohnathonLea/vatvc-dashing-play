@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #14B783;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.8);
+
+// ----------------------------------------------------------------------------
+// Widget-quote styles
+// ----------------------------------------------------------------------------
+.widget-sprint-goal {
+  // background: $background-color url('/assets/quote.png') no-repeat 50% 50%;
+  //background: $background-color url('/assets/goal.png') no-repeat 2% 2%;
+  background-color: $background-color;
+  background-position: center;
+  background-image: url('/assets/goal1600.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+
+  .title {
+    color: $title-color;
+    margin-top:-50px;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  h3 {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.large h3 {
+    font-size: 65px;
+  }
+}
