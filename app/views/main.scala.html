@@ -9,8 +9,10 @@
 
     <title>Team Incredibles Dashing</title>
 
-    <!-- The javascript and css are managed by sprockets. The files can be found in the /assets folder-->
-    <script type="text/javascript" src="/assets/application.js"></script>
+    <script type="text/javascript" src='@routes.Assets.at("lib/jquery/jquery.min.js")'></script>
+    <script type="text/javascript" src='@routes.Assets.at("lib/gridster.js/dist/jquery.gridster.min.js")'></script>
+    <!--<script type="text/javascript" src="/assets/application.js"></script>-->
+    <link rel="stylesheet" href='@routes.Assets.at("lib/gridster.js/dist/jquery.gridster.min.css")'>
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/application.css")'>
 
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
@@ -21,20 +23,22 @@
 
 <div class="gridster">
     <ul>
-        <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-            <div data-id="SprintProgress" data-view="SprintProgress" data-title="Stories In Progress" class="inProgress"></div>
-        </li>
-
         <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-            <div data-id="SprintGoal" data-view="SprintGoal" data-title="boo" class="inProgress"></div>
+            @views.html.widgets.sprintGoal()
+            <!--<div data-id="SprintGoal" data-view="SprintGoal" data-title="boo" class="inProgress"></div>-->
         </li>
 
-        <li data-row="2" data-col="2" data-sizex="2" data-sizey="1">
-            <div data-view="Image" data-image="/incredibles_logo.png"></div>
+        <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+            WORLD
+            <div data-id="SprintProgress" data-view="SprintProgress" data-title="Stories In Progress" class="inProgress"></div>
         </li>
 
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
             <div data-id="Quotes" data-view="Quotes"></div>
+        </li>
+
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="1">
+            <div data-view="Image" data-image="/incredibles_logo.png"></div>
         </li>
 
         <li data-row="3" data-col="1" data-sizex="3" data-sizey="3">
@@ -42,5 +46,16 @@
         </li>
     </ul>
 </div>
+<script type="text/javascript">
+    var gridster;
+
+    $(function() {
+        gridster = $(".gridster > ul").gridster({
+            widget_margins: [10, 10],
+            widget_base_dimensions: [140, 140],
+            min_cols: 6
+        }).data('gridster');
+    });
+</script>
 </body>
 </html>
